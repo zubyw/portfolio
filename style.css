@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+
+
+#topnoti-link {
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+#topnoti {
+    background-color: #1A73E9;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    font-size: 13px;
+    margin: 0;
+}
+
+#topnoti:hover {
+    background-color: #1666C1;
+    font-size: 15px;
+}
+
+#topnoti::after {
+    content: ' ➔';
+    font-size: 1em;
+    margin-left: 10px;
+    transition: font-size 0.3s ease;
+}
+
+#topnoti:hover::after {
+    font-size: 0.9em;
+}
+
+.styled-title {
+    background: linear-gradient(to bottom right, black 30%, rgba(0, 0, 0, 0.4));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem; /* for mobile devices */
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.6s;
+    padding: 1.5rem 0;
+    margin: 20px; /* Add margin to position the title independently */
+    margin-bottom:0px;
+    padding-bottom:0px;
+
+}
+.styled-subtitle {
+    background: linear-gradient(to bottom right, black 30%, rgba(0, 0, 0, 0.2)); /* Slightly lighter tint */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 1rem; /* Slightly smaller font size */
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.8s; /* Slight delay for a sequential effect */
+    padding: 1rem 0;
+    margin-top:0px;
+    margin-left: 20px; /* Add margin to position the subtitle independently */
+  
+
+}
+
+
+

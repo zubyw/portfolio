@@ -1,0 +1,97 @@
+@keyframes moveUpFadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveDownFadeIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUpFadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.appear {
+    animation: moveUpFadeIn 1s ease-out forwards;
+}
+
+.appear-down {
+    animation: moveDownFadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.styled-title {
+    background: linear-gradient(to bottom right, black 30%, rgba(0, 0, 0, 0.4));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 3rem; /* for mobile devices */
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.6s;
+    padding: 1.5rem 0;
+    margin: 20px; /* Add margin to position the title independently */
+}
+
+.styled-subtitle {
+    background: linear-gradient(to bottom right, black 30%, rgba(0, 0, 0, 0.2)); /* Slightly lighter tint */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2rem; /* Slightly smaller font size */
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.8s; /* Slight delay for a sequential effect */
+    padding: 1rem 0;
+    margin: 20px; /* Add margin to position the subtitle independently */
+}
+
+@media (min-width: 640px) {
+    .styled-title {
+        font-size: 4rem; /* for small screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .styled-title {
+        font-size: 5rem; /* for medium screens */
+    }
+}
