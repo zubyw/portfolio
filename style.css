@@ -75,7 +75,9 @@ html{
     animation: fadeIn 1s ease-out forwards;
     animation-delay: 0.8s; /* Slight delay for a sequential effect */
     padding: 1rem 0;
-    margin-top:0px;
+    margin-top:10px;
+    margin-bottom:10px;
+
     margin-left: 20px; /* Add margin to position the subtitle independently */
   
 
@@ -83,3 +85,24 @@ html{
 
 
 
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    margin-top: 0px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1s; /* Delay to create a sequential effect */
+}
+
+.social-icon {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #1A73E9; /* Color change on hover */
+}
