@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin:0;
-
+ height: 500vh;
 }
 html{
     margin: 0;
@@ -47,7 +47,7 @@ html{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 3rem; /* for mobile devices */
+    font-size: 4rem;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: -0.05em;
@@ -56,7 +56,7 @@ html{
     animation: fadeIn 1s ease-out forwards;
     animation-delay: 0.6s;
     padding: 1.5rem 0;
-    margin: 20px; /* Add margin to position the title independently */
+    margin: 20px; 
     margin-bottom:0px;
     padding-bottom:0px;
 
@@ -105,4 +105,13 @@ html{
 
 .social-icon:hover {
     color: #1A73E9; /* Color change on hover */
+}
+#software-stack-title {
+    text-align: center;
+    margin: 20px auto; 
+    font-size: 2rem ;
+}
+
+.spacing {
+    margin: 25vh 0; /* Adjust the margin as needed */
 }
