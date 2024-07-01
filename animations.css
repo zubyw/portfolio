@@ -39,6 +39,11 @@
     animation: moveDownFadeIn 1s ease-out forwards;
 }
 
+.appear-trigger {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

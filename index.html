@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script type="text/javascript" src="background.js" defer></script>
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="smallercreen.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <title>Zuby Portfolio</title>
-    <style>
-        #canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-    </style>
 </head>
 <body>
     <canvas id="canvas"></canvas>
@@ -37,61 +30,38 @@
         </p>
     </div>
 
-    <p class="styled-subtitle appear">Software Developer<br>  20 
+    <p class="styled-subtitle appear">Software Developer<br>   20 <br> 
     </p>
     <div class="social-icons appear">
+      
         <a href="mailto:zubyw2012@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
         <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
         <a href="https://linkedin.com" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
     </div>
     </div>
+    
     <div class="spacing"></div>
 
+    
+    <section id="section-stack">
     <h1 class="styled-title appear" id="software-stack-title">Software Stack</h1>
+    </section>
 
+
+
+
+
+   
     <div class="spacing"></div>
 
+    <section>
     <h1 class="styled-title appear" id="software-stack-title">Project's</h1>
+    </section>
+    <div class="spacing"></div>
+
+    <section>
     <h1 class="styled-title appear" id="software-stack-title">Socials</h1>
-
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0xffffff, 0.3); // Set a slightly transparent white background
-
-        const geometry = new THREE.BufferGeometry();
-        const particles = 1000;
-        const positions = new Float32Array(particles * 3);
-
-        for (let i = 0; i < particles * 3; i += 3) {
-            positions[i] = (Math.random() - 0.5) * 10;
-            positions[i + 1] = (Math.random() - 0.5) * 10;
-            positions[i + 2] = (Math.random() - 0.5) * 10;
-        }
-
-        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-        const material = new THREE.PointsMaterial({ color: 0xcccccc, size: 0.02 });
-        const points = new THREE.Points(geometry, material);
-        scene.add(points);
-
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            points.rotation.x += 0.0005;
-            points.rotation.y += 0.0005;
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
+    </section>
+    
 </body>
 </html>
