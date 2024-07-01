@@ -27,11 +27,22 @@ scene.add(points);
 camera.position.z = 5;
 
 let isScrolling = false;
+let scrollDirection = 0;
+let lastScrollTop = 0;
 let scrollTimeout;
 
 window.addEventListener('scroll', () => {
     isScrolling = true;
     clearTimeout(scrollTimeout);
+
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > lastScrollTop) {
+        scrollDirection = 1; // Scrolling down
+    } else {
+        scrollDirection = -1; // Scrolling up
+    }
+    lastScrollTop = st <= 0 ? 0 : st;
+
     scrollTimeout = setTimeout(() => {
         isScrolling = false;
     }, 100); // Reset isScrolling after 100ms of no scrolling
@@ -41,12 +52,12 @@ function animate() {
     requestAnimationFrame(animate);
 
     if (isScrolling) {
-        // Scrolling effect: move particles outward
+        // Scrolling effect: move particles based on scroll direction
         const positions = points.geometry.attributes.position.array;
         for (let i = 0; i < positions.length; i += 3) {
-            positions[i] += positions[i] * 0.01;
-            positions[i + 1] += positions[i + 1] * 0.01;
-            positions[i + 2] += positions[i + 2] * 0.01;
+            positions[i] += positions[i] * 0.01 * scrollDirection;
+            positions[i + 1] += positions[i + 1] * 0.01 * scrollDirection;
+            positions[i + 2] += positions[i + 2] * 0.01 * scrollDirection;
 
             // Reset particles that go too far
             if (Math.abs(positions[i]) > 5 || Math.abs(positions[i + 1]) > 5 || Math.abs(positions[i + 2]) > 5) {
