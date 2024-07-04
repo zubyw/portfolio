@@ -89,7 +89,7 @@ window.addEventListener('resize', () => {
 
 
 // typed text 
-const phrases = ["build reponsive websites.", "build apps using Flutter.", "work on new projects.", "improve something i made.", "help people make or improve a website."];
+const phrases = ["build reponsive websites.", "build apps using Flutter.", "work on new projects.", "learn new frameworks."];
 let currentPhraseIndex = 0;
 let currentCharacterIndex = 0;
 const typingSpeed = 90;
