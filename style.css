@@ -7,6 +7,12 @@ html{
     margin: 0;
     padding: 0;
 }
+:root {
+    --fg-light: #888;
+    --fg: #555;
+    --fg-deep: #222;
+    --fg-deeper: #000;
+}
 
 
 #topnoti-link {
@@ -72,6 +78,7 @@ html{
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0;
+    
 }
 .styled-subtitle {
     background: linear-gradient(to bottom right, black 30%, rgba(0, 0, 0, 0.2)); /* Slightly lighter tint */
@@ -328,10 +335,12 @@ margin: 0px auto;
     font-size: 2.5rem; /* Adjust size if necessary */
     text-align: center;
     margin-top: 20px;
+    letter-spacing: -0.01em;
+    
 }
 
 #dynamic-text span:first-child {
-    color: black; /* "I like to build" text color */
+    color: var(--fg-deeper);
 }
 
 #typed-text {

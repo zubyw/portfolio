@@ -37,9 +37,9 @@ window.addEventListener('scroll', () => {
 
     const st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > lastScrollTop) {
-        scrollDirection = 1; 
+        scrollDirection = 1; // Scrolling down
     } else {
-        scrollDirection = -1; 
+        scrollDirection = -1; // Scrolling up
     }
     lastScrollTop = st <= 0 ? 0 : st;
 
@@ -51,14 +51,13 @@ window.addEventListener('scroll', () => {
 function animate() {
     requestAnimationFrame(animate);
 
-    if (isScrolling) {
+    if (isScrolling && scrollDirection > 0) { // Only apply the effect when scrolling downwards
         const positions = points.geometry.attributes.position.array;
         for (let i = 0; i < positions.length; i += 3) {
             positions[i] += positions[i] * 0.01 * scrollDirection;
             positions[i + 1] += positions[i + 1] * 0.01 * scrollDirection;
             positions[i + 2] += positions[i + 2] * 0.01 * scrollDirection;
 
-           
             if (Math.abs(positions[i]) > 5 || Math.abs(positions[i + 1]) > 5 || Math.abs(positions[i + 2]) > 5) {
                 positions[i] = (Math.random() - 0.5) * 10;
                 positions[i + 1] = (Math.random() - 0.5) * 10;
@@ -67,7 +66,6 @@ function animate() {
         }
         points.geometry.attributes.position.needsUpdate = true;
     } else {
-    
         points.rotation.x += 0.0005;
         points.rotation.y += 0.0005;
     }
@@ -91,7 +89,7 @@ window.addEventListener('resize', () => {
 
 
 // typed text 
-const phrases = ["build reponsive websites.", "build apps using Flutter.", "work on new projects.", "think about how i can improve something i made.", "help people make or improve a website."];
+const phrases = ["build reponsive websites.", "build apps using Flutter.", "work on new projects.", "improve something i made.", "help people make or improve a website."];
 let currentPhraseIndex = 0;
 let currentCharacterIndex = 0;
 const typingSpeed = 90;
