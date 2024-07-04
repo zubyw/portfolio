@@ -82,3 +82,44 @@ window.addEventListener('resize', () => {
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+
+
+
+
+
+
+
+// typed text 
+const phrases = ["build reponsive websites.", "build apps using Flutter.", "work on new projects.", "think about how i can improve something i made.", "help people make or improve a website."];
+let currentPhraseIndex = 0;
+let currentCharacterIndex = 0;
+const typingSpeed = 90;
+const erasingSpeed = 100;
+const delayBetweenPhrases = 1000;
+const typedTextElement = document.getElementById('typed-text');
+
+function type() {
+    if (currentCharacterIndex < phrases[currentPhraseIndex].length) {
+        typedTextElement.textContent += phrases[currentPhraseIndex].charAt(currentCharacterIndex);
+        currentCharacterIndex++;
+        setTimeout(type, typingSpeed);
+    } else {
+        setTimeout(erase, delayBetweenPhrases);
+    }
+}
+
+function erase() {
+    if (currentCharacterIndex > 0) {
+        typedTextElement.textContent = phrases[currentPhraseIndex].substring(0, currentCharacterIndex - 1);
+        currentCharacterIndex--;
+        setTimeout(erase, erasingSpeed);
+    } else {
+        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        setTimeout(type, typingSpeed);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(type, delayBetweenPhrases);
+});

@@ -95,7 +95,6 @@ html{
   
 
 }
-
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -111,20 +110,49 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 10px;
     width: 100px;
+    height: 100px;
     text-align: center;
     font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+.tech-item::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 12px;
+    border: 2px solid #1A73E9;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.tech-item:hover {
+    transform: scale(0.95);
+}
+
+.tech-item:hover::before {
+    opacity: 1;
 }
 
 .tech-item img {
     width: 40px;
     height: 40px;
     margin-bottom: 5px;
+    object-fit: contain;
 }
-
 
 .social-icons {
     display: flex;
@@ -289,4 +317,32 @@ margin: 0px auto;
         width: 100%;
         max-width: 400px;
     }
+}
+
+
+
+
+
+
+#dynamic-text {
+    font-size: 2.5rem; /* Adjust size if necessary */
+    text-align: center;
+    margin-top: 20px;
+}
+
+#dynamic-text span:first-child {
+    color: black; /* "I like to build" text color */
+}
+
+#typed-text {
+    display: inline;
+    white-space: nowrap;
+    color: #1A73E9; /* Typed text color */
+    border-right: 0.1em solid #1A73E9;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #1A73E9; }
 }
