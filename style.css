@@ -224,11 +224,11 @@ html{
 
 
 
-section{
+section {
     width: 100%;
-    height: 40vh;
+    min-height: 40vh;
+    padding: 20px 0;
 }
-
 #section-stack{
 max-width: 80vh;
 margin: 0px auto;
@@ -364,12 +364,82 @@ margin: 0px auto;
 #container {
     display: flex;
     justify-content: center;
-    max-width: 80vh;
-
-
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+}
+.project-div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+
+    width: 65%;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
+.project-image-container {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    padding: 0;
+}
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Apply the same border-radius as the container */
+   
+}
+.project-content {
+    flex: 3;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.project-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--fg-deeper);
+    align-self: flex-start; /* Ensures the title starts at the top */
+    padding-top:0px;
+    /* margin-top: 0px; */
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+    align-self: flex-start; /* Ensures the tech tags start at the top */
+}
+
+.project-description {
+    font-size: 1rem;
+    color: var(--fg);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    align-self: flex-start; /* Ensures the description starts at the top */
+}
+
+.tech-tag {
+    background-color: #1A73E9;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
 .inner-div {
     background-color: #f0f0f0;   
      width: 50%;
@@ -452,4 +522,39 @@ nav .right-text a:hover {
 .wave-emoji:hover {
     animation: wave 2.5s ease infinite;
     transform-origin: 70% 70%;
+}
+
+#experience-div {
+    width: 65%;
+    height: auto;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.experience-content {
+    display: flex;
+    align-items: flex-start;
+}
+.experience-left {
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.experience-left h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.experience-date {
+    text-align: right;
+    margin-top: 0;
+    min-width: 80px;
+}
+.experience-content > div:first-child {
+    flex-shrink: 0;
 }
