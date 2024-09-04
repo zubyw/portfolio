@@ -396,6 +396,8 @@ margin: 0px auto;
     height: 100%;
     object-fit: cover;
     border-radius: 10px; /* Apply the same border-radius as the container */
+    object-position: 15% center;
+
    
 }
 .project-content {
@@ -406,6 +408,8 @@ margin: 0px auto;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
+    padding-right: 1rem;
+
 }
 
 .project-title {
@@ -522,39 +526,4 @@ nav .right-text a:hover {
 .wave-emoji:hover {
     animation: wave 2.5s ease infinite;
     transform-origin: 70% 70%;
-}
-
-#experience-div {
-    width: 65%;
-    height: auto;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.experience-content {
-    display: flex;
-    align-items: flex-start;
-}
-.experience-left {
-    margin-left: 20px;
-    flex-grow: 1;
-}
-
-.experience-left h1 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-.experience-date {
-    text-align: right;
-    margin-top: 0;
-    min-width: 80px;
-}
-.experience-content > div:first-child {
-    flex-shrink: 0;
 }
