@@ -373,15 +373,20 @@ margin: 0px auto;
     display: flex;
     flex-direction: row-reverse;
     align-items: stretch;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
-
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 24px;
     width: 65%;
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
     overflow: hidden;
+}
+
+.project-div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
 
 .project-image-container {
@@ -390,60 +395,68 @@ margin: 0px auto;
     justify-content: flex-end;
     align-items: stretch;
     padding: 0;
+    overflow: hidden;
+    border-radius: 12px;
 }
+
 .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px; /* Apply the same border-radius as the container */
+    border-radius: 12px;
     object-position: 15% center;
-
-   
+    transition: transform 0.3s ease;
 }
+
+.project-div:hover .project-image {
+    transform: scale(1.05);
+}
+
 .project-content {
     flex: 3;
-   
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 100%;
-    padding-right: 1rem;
-
+    padding-right: 1.5rem;
 }
 
 .project-title {
-    font-size: 2rem;
-    margin-bottom: 15px;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
     color: var(--fg-deeper);
-    align-self: flex-start; /* Ensures the title starts at the top */
-    padding-top:0px;
-    /* margin-top: 0px; */
+    font-weight: 600;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 15px;
-    align-self: flex-start; /* Ensures the tech tags start at the top */
+    margin-bottom: 1rem;
 }
 
 .project-description {
     font-size: 1rem;
     color: var(--fg);
-    margin-bottom: 15px;
-    line-height: 1.5;
-    align-self: flex-start; /* Ensures the description starts at the top */
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .tech-tag {
-    background-color: #1A73E9;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
+    background-color: rgba(26, 115, 233, 0.1);
+    color: #1A73E9;
+    padding: 6px 12px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
+
+.tech-tag:hover {
+    background-color: rgba(26, 115, 233, 0.2);
+}
+
 .inner-div {
     background-color: #f0f0f0;   
      width: 50%;
