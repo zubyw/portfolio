@@ -93,6 +93,39 @@
     <section>
         <h1 class="styled-title appear" id="software-stack-title">Projects</h1>
         
+        <!-- New Project: StreetSafe -->
+        <div id="container" class="appear">
+            <div class="project-div">
+                <div class="project-image-container">
+                    <div class="project-gallery">
+                        <a href="https://streetsafe.nl/" target="_blank">
+                            <img id="streetsafe-main-image" src="images/Simulator Screenshot - iPhone 11 Pro Max - 2025-09-15 at 15.45.47.png" alt="StreetSafe App" class="project-image center-image iphone-simulator gallery-main-image">
+                        </a>
+                        <div class="gallery-thumbnails">
+                            <img src="images/Simulator Screenshot - iPhone 11 Pro Max - 2025-09-15 at 15.45.47.png" alt="StreetSafe Screen 1" class="gallery-thumbnail active" onclick="changeStreetSafeImage(this, 'images/Simulator Screenshot - iPhone 11 Pro Max - 2025-09-15 at 15.45.47.png')">
+                            <img src="images/Simulator Screenshot - iPhone 11 Pro Max - 2025-09-15 at 15.46.18.png" alt="StreetSafe Screen 2" class="gallery-thumbnail" onclick="changeStreetSafeImage(this, 'images/Simulator Screenshot - iPhone 11 Pro Max - 2025-09-15 at 15.46.18.png')">
+                            <img src="images/Simulator Screenshot - iPhone 11 Pro Max - 2025-09-15 at 15.47.03.png" alt="StreetSafe Screen 3" class="gallery-thumbnail" onclick="changeStreetSafeImage(this, 'images/Simulator Screenshot - iPhone 11 Pro Max - 2025-09-15 at 15.47.03.png')">
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">StreetSafe</h2>
+                    <p class="project-description">
+                        Een intelligente veiligheidsapp voor iedereen die zich veiliger wil voelen op straat. StreetSafe verbindt mensen in Nederland via een community-gebaseerd veiligheidsnetwerk.
+                    </p>
+                    <p class="project-description">De app biedt een 3-seconden noodknop, live locatiedeling en community support binnen 2 kilometer. Nu beschikbaar in de App Store.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Maps API</span>
+                        <span class="tech-tag">Community Network</span>
+                        <span class="tech-tag">iOS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="container" class="appear">
             <div class="project-div">
                 <div class="project-image-container">
@@ -286,6 +319,18 @@
 
     <div class="spacing"></div>
 
+<script>
+function changeStreetSafeImage(thumbnail, imageSrc) {
+    // Update main image
+    document.getElementById('streetsafe-main-image').src = imageSrc;
+    
+    // Update active thumbnail
+    document.querySelectorAll('.gallery-thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    thumbnail.classList.add('active');
+}
+</script>
 
 </body>
 </html>
