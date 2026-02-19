@@ -164,10 +164,13 @@
                     <div class="project-gallery">
                         <img id="smartcharge-main-image" src="images/4385ace3-7bff-453a-b6da-7eec2d2db822.JPG" alt="SmartCharge Navigator team" class="project-image gallery-main-image" itemprop="screenshot">
                         <div class="gallery-thumbnails">
-                            <img src="images/4385ace3-7bff-453a-b6da-7eec2d2db822.JPG" alt="Team foto" class="gallery-thumbnail active" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/4385ace3-7bff-453a-b6da-7eec2d2db822.JPG')">
-                            <img src="images/Screenshot%202025-12-29%20at%2014.56.56.png" alt="Dashboard" class="gallery-thumbnail" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Screenshot%202025-12-29%20at%2014.56.56.png')">
-                            <img src="images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.10.png" alt="App kaart" class="gallery-thumbnail" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.10.png')">
-                            <img src="images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.42.png" alt="App detail" class="gallery-thumbnail" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.42.png')">
+                            <img src="images/4385ace3-7bff-453a-b6da-7eec2d2db822.JPG" alt="Team foto" class="gallery-thumbnail active" data-fit="cover" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/4385ace3-7bff-453a-b6da-7eec2d2db822.JPG')">
+                            <img src="images/Screenshot%202025-12-29%20at%2014.56.56.png" alt="Dashboard" class="gallery-thumbnail" data-fit="cover" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Screenshot%202025-12-29%20at%2014.56.56.png')">
+                            <img src="images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.10.png" alt="App kaart" class="gallery-thumbnail" data-fit="contain" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.10.png')">
+                            <img src="images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.42.png" alt="App detail" class="gallery-thumbnail" data-fit="contain" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.42.png')">
+                            <img src="images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.55.png" alt="App laadpalen lijst" class="gallery-thumbnail" data-fit="contain" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.46.55.png')">
+                            <img src="images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.47.04.png" alt="App zoeken" class="gallery-thumbnail" data-fit="contain" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.47.04.png')">
+                            <img src="images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.47.12.png" alt="App route navigatie" class="gallery-thumbnail" data-fit="contain" onclick="changeGalleryImage('smartcharge-main-image', this, 'images/Simulator%20Screenshot%20-%20iphone%2015%20pro%20-%202025-12-24%20at%2012.47.12.png')">
                         </div>
                     </div>
                 </div>
@@ -373,13 +376,14 @@
         </div>
     </footer>
 
-    <div class="spacing"></div>
-
 <script>
 function changeGalleryImage(mainImageId, thumbnail, imageSrc) {
-    document.getElementById(mainImageId).src = imageSrc;
-    const container = thumbnail.closest('.gallery-thumbnails');
-    container.querySelectorAll('.gallery-thumbnail').forEach(thumb => {
+    var mainImg = document.getElementById(mainImageId);
+    mainImg.src = imageSrc;
+    var fit = thumbnail.getAttribute('data-fit') || 'contain';
+    mainImg.style.objectFit = fit;
+    var container = thumbnail.closest('.gallery-thumbnails');
+    container.querySelectorAll('.gallery-thumbnail').forEach(function(thumb) {
         thumb.classList.remove('active');
     });
     thumbnail.classList.add('active');

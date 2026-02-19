@@ -1,7 +1,7 @@
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     margin: 0;
-    height: 500vh;
+    min-height: 100vh;
     background: linear-gradient(160deg, #fafbff 0%, #eff6ff 30%, #f0f9ff 60%, #f5faff 100%);
     background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
@@ -436,8 +436,8 @@ margin: 0px auto;
     width: 100%;
     height: 100%;
     display: block;
-    object-fit: contain !important;
-    object-position: center !important;
+    object-fit: cover;
+    object-position: center;
 }
 
 .gallery-thumbnails {
