@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    background: #525659;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.a4-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    overflow: hidden;
+    transform: scale(0.75);
+    transform-origin: top center;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 36px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.sidebar-section h3 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #94a3b8;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.sidebar-section p,
+.sidebar-section a,
+.sidebar-section li {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: #cbd5e1;
+}
+
+.sidebar-section a {
+    text-decoration: none;
+    color: #93c5fd;
+    word-break: break-all;
+}
+
+.sidebar-section a:hover {
+    text-decoration: underline;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-section li {
+    position: relative;
+    padding-left: 12px;
+}
+
+.sidebar-section li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #60a5fa;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 0.78rem;
+}
+
+.contact-item .label {
+    color: #94a3b8;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: fit-content;
+}
+
+/* ---- Main content ---- */
+.main-content {
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-header {
+    margin-bottom: 24px;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 16px;
+}
+
+.resume-header h1 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.resume-header .subtitle {
+    font-size: 0.95rem;
+    color: #2563eb;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.resume-header .location {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 22px;
+}
+
+.section-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #2563eb;
+    font-weight: 700;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.section-intro {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+/* Experience & Education entries */
+.entry {
+    margin-bottom: 16px;
+}
+
+.entry:last-child {
+    margin-bottom: 0;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.entry-company {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.entry-period {
+    font-size: 0.72rem;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.entry-role {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 1px;
+}
+
+.entry-location {
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 1px;
+}
+
+.entry-description {
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: #475569;
+    margin-top: 6px;
+}
+
+.entry-description ul {
+    padding-left: 16px;
+    margin-top: 4px;
+}
+
+.entry-description li {
+    margin-bottom: 3px;
+}
+
+/* Skills in main */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tag {
+    font-size: 0.72rem;
+    padding: 3px 10px;
+    background: #eff6ff;
+    color: #1e40af;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid #dbeafe;
+}
+
+/* Page 2 continuation */
+.page-number {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    padding: 12px;
+    grid-column: 1 / -1;
+    margin-top: auto;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        gap: 0;
+    }
+    .a4-page {
+        box-shadow: none;
+        page-break-after: always;
+    }
+}

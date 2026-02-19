@@ -1,0 +1,3 @@
+Contact: mailto:zubyw2012@gmail.com
+Preferred-Languages: nl, en
+Canonical: https://zubyvankuilenburg.nl/.well-known/security.txt

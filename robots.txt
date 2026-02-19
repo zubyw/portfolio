@@ -14,5 +14,5 @@ Disallow: /eten/
 Disallow: /etentjes
 Disallow: /etentjes/
 
-# Sitemap locatie (optioneel, pas aan als je een sitemap hebt)
-# Sitemap: https://zubyvankuilenburg.nl/sitemap.xml
+# Sitemap locatie
+Sitemap: https://zubyvankuilenburg.nl/sitemap.xml

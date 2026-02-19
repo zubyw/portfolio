@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.banner {
+    width: 1584px;
+    height: 396px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%);
+}
+
+/* Subtle grid pattern */
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        radial-gradient(circle at 1px 1px, rgba(37, 99, 235, 0.08) 1px, transparent 0);
+    background-size: 32px 32px;
+    z-index: 1;
+}
+
+/* Glowing accent orbs */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+}
+
+.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: rgba(37, 99, 235, 0.15);
+    top: -200px;
+    right: 200px;
+}
+
+.orb-2 {
+    width: 350px;
+    height: 350px;
+    background: rgba(14, 165, 233, 0.1);
+    bottom: -150px;
+    left: 100px;
+}
+
+.orb-3 {
+    width: 250px;
+    height: 250px;
+    background: rgba(6, 182, 212, 0.08);
+    top: -80px;
+    left: 600px;
+}
+
+/* Content layout */
+.banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 80px;
+    gap: 64px;
+}
+
+/* Left: text */
+.banner-text {
+    flex: 1;
+}
+
+.banner-name {
+    font-size: 52px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.banner-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #60a5fa;
+    margin-top: 8px;
+    letter-spacing: -0.3px;
+}
+
+.banner-tagline {
+    font-size: 15px;
+    font-weight: 400;
+    color: #94a3b8;
+    margin-top: 16px;
+    line-height: 1.5;
+    max-width: 520px;
+}
+
+/* Tech pills */
+.banner-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.banner-pill {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 6px;
+    color: #93c5fd;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    background: rgba(37, 99, 235, 0.1);
+    letter-spacing: 0.3px;
+}
+
+/* Right: decorative code block */
+.banner-visual {
+    width: 380px;
+    flex-shrink: 0;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(96, 165, 250, 0.12);
+    border-radius: 12px;
+    padding: 24px 28px;
+    backdrop-filter: blur(10px);
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.code-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.code-dot.red { background: #ef4444; }
+.code-dot.yellow { background: #eab308; }
+.code-dot.green { background: #22c55e; }
+
+.code-filename {
+    font-size: 11px;
+    color: #64748b;
+    margin-left: 8px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.code-block {
+    font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.code-keyword { color: #c084fc; }
+.code-string { color: #34d399; }
+.code-property { color: #60a5fa; }
+.code-bracket { color: #64748b; }
+.code-comment { color: #475569; font-style: italic; }
+
+/* Accent line at bottom */
+.banner-accent-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #0ea5e9, #06b6d4, #0ea5e9, #2563eb);
+    z-index: 3;
+}
+
+/* Guide text */
+.guide {
+    position: fixed;
+    bottom: 20px;
+    color: #666;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    text-align: center;
+}
