@@ -1,8 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Zuby van Kuilenburg - Software Developer | Flutter, React & Web Development Portfolio</title>
+    <meta name="description" content="Zuby van Kuilenburg - HBO Informatica student & Software Developer gespecialiseerd in Flutter, React, Next.js en web development. Bekijk mijn portfolio met projecten zoals StreetSafe, Roadguide en meer.">
+    <meta name="keywords" content="Zuby van Kuilenburg, Software Developer, Flutter Developer, React Developer, Web Developer, HBO Informatica, Hogeschool Rotterdam, Portfolio, StreetSafe, Roadguide, Mobile App Development, Nederland">
+    <meta name="author" content="Zuby van Kuilenburg">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zubyvankuilenburg.nl/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zubyvankuilenburg.nl/">
+    <meta property="og:title" content="Zuby van Kuilenburg - Software Developer Portfolio">
+    <meta property="og:description" content="HBO Informatica student & Software Developer gespecialiseerd in Flutter, React, Next.js en web development. Bekijk mijn projecten en neem contact op.">
+    <meta property="og:image" content="https://zubyvankuilenburg.nl/images/mokup/mokup1.png">
+    <meta property="og:locale" content="nl_NL">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zubyvankuilenburg.nl/">
+    <meta property="twitter:title" content="Zuby van Kuilenburg - Software Developer Portfolio">
+    <meta property="twitter:description" content="HBO Informatica student & Software Developer gespecialiseerd in Flutter, React, Next.js en web development.">
+    <meta property="twitter:image" content="https://zubyvankuilenburg.nl/images/mokup/mokup1.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Zuby van Kuilenburg",
+      "jobTitle": "Software Developer",
+      "url": "https://zubyvankuilenburg.nl",
+      "sameAs": [
+        "https://www.linkedin.com/in/zubyw/",
+        "https://www.instagram.com/zubyw/",
+        "https://github.com/zubyw"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Hogeschool Rotterdam"
+      },
+      "knowsAbout": ["Flutter", "React", "Next.js", "Web Development", "Mobile App Development", "PHP", "JavaScript", "TypeScript", "Firebase"],
+      "email": "zubyw2012@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NL"
+      }
+    }
+    </script>
+    
     <script type="text/javascript" src="background.js" defer></script>
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="style.css">
@@ -11,51 +61,62 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <title>Zuby Portfolio</title>
 </head>
 <body>
     <canvas id="canvas"></canvas>
    
-    <a class="appear-down" id="topnoti-link" href="https://roadguide.nl/" target="_blank">
-        <p  id="topnoti">Bekijk nu mijn laatste project | Roadguide!</p>
+    <a class="appear-down" id="topnoti-link" href="https://streetsafe.nl/" target="_blank">
+        <p id="topnoti">
+            <i class="fas fa-shield-alt" style="margin-right: 8px; color: white;"></i>
+            Bekijk nu mijn laatste project | StreetSafe!
+        </p>
     </a>
     
-    <nav class="appear">
-        <span class="emoji wave-emoji">👋</span>
+    <nav class="appear" role="navigation" aria-label="Hoofd navigatie">
+        <span class="emoji wave-emoji" aria-label="Zwaaiende hand">👋</span>
         <div class="right-text">
             <a href="#section-stack">Skills</a>
             <a href="#container">Projects</a>
         </div>
     </nav>
     
-    <div id="frontpage-div">
+    <main id="frontpage-div">
 
           
     <h1 class="styled-title appear">Zuby <br> van Kuilenburg</h1>
 
-    <div id="about-me-div">
-        <p class="appear introtext">
-            Hey, ik ben Zuby van Kuilenburg <strong>Software Developer</strong>. Tijdens mijn MBO opleiding bij het Grafisch Lyceum heb ik een mooie <strong>Flutter</strong> app ontwikkeld - een geweldige leerervaaring die me echt heeft geholpen groeien in de wereld van software development.
-        </p>
-        <p class="appear introtext">
-            Momenteel volg ik de HBO Informatica opleiding bij Hogeschool Rotterdam en ben ik sterk in <strong>HTML</strong> <strong>CSS</strong> <strong>PHP </strong>en<strong></strong> Flutter</strong>. Ook heb ik verschillende projecten gebouwd met <strong>WordPress</strong>, <strong>React</strong> en andere interessante technieken, verder heb al meerdere klantoprojecten succesvol afgerond. Mijn doel is om me continue te ontwikkelen en boeiende projecten te maken.
-        </p>
-    </div>
+<div id="about-me-div" itemscope itemtype="https://schema.org/AboutPage">
+    <p class="appear introtext" itemprop="description">
+        Hey, ik ben Zuby van Kuilenburg <strong>Software Developer.</strong> 
+        Tijdens mijn vorige opleiding en stage heb ik mijn eerste grote <strong>Flutter</strong> app ontwikkeld, wat mijn passie voor mobile development heeft versterkt.
+        Deze ervaring vormde de basis voor twee van mijn grootste projecten tot nu toe: 
+        <strong>Roadguide</strong>, een mobiliteitsapp voor betaalbaar parkeren, tanken en laden, 
+        en <strong>StreetSafe</strong>, een veiligheidsapp die nu in de App Store staat.
+    </p>
+    <p class="appear introtext" itemprop="description">
+        Momenteel volg ik de <strong>HBO Informatica</strong> opleiding bij <strong>Hogeschool Rotterdam</strong>. 
+        Mijn sterke punten liggen in <strong>Flutter</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>PHP</strong> en moderne frontend ontwikkeling. 
+        Daarnaast bouw ik projecten met <strong>React</strong>, <strong>Next.js</strong>, <strong>Tailwind</strong>, <strong>TypeScript</strong> en diverse AI-tools. 
+        Ik heb inmiddels meerdere klantprojecten succesvol afgerond en blijf mezelf continu uitdagen. 
+        Mijn doel is om me verder te ontwikkelen als full-stack developer en projecten te creëren die echte waarde toevoegen.
+    </p>
+</div>
 
-    <p class="styled-subtitle appear">Software Developer<br>   20 <br> 
+
+    <p class="styled-subtitle appear">Software Developer<br>   22 <br> 
     </p>
 
-    <div class="social-icons appear">
+    <div class="social-icons appear" role="navigation" aria-label="Social media links">
       
         <a href="mailto:zubyw2012@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
         <a href="https://www.instagram.com/zubyw/" class="social-icon"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/zubyw/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
     </div>
   
-    <a target="_blank" style="text-decoration: none;" href="https://www.linkedin.com/connect-services/?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fzubyw%2F"><button class="contact-button appear">Contact</button></a>
+    <a target="_blank" style="text-decoration: none;" href="https://www.linkedin.com/connect-services/?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fzubyw%2F" aria-label="Neem contact op via LinkedIn"><button class="contact-button appear">Contact</button></a>
 
 
-    </div>
+    </main>
     <div class="spacing"></div>
     <div id="dynamic-text" class="styled-subtitle appear">
         <span>I like to </span><span id="typed-text"></span>
@@ -64,19 +125,19 @@
     <div class="spacing"></div>
 
     
-    <section id="section-stack">
-    <h1 class="styled-title appear" id="software-stack-title">Knowledge</h1>
+    <section id="section-stack" aria-labelledby="software-stack-title">
+    <h2 class="styled-title appear" id="software-stack-title">Knowledge</h2>
     <div class="tech-stack appear">
-        <div class="tech-item"><img src="images/html.png" alt="HTML"> HTML</div>
-        <div class="tech-item"><img src="images/css.png" alt="CSS"> CSS</div>
-        <div class="tech-item"><img src="images/JavaScript-logo.png" alt="JavaScript"> JavaScript</div>
-        <div class="tech-item"><img src="images/php.png" alt="PHP"> PHP</div>
-        <div class="tech-item"><img src="images/mysql.svg" alt="MySQL"> MySQL</div>
-        <div class="tech-item"><img src="images/flutter.png" alt="Flutter"> Flutter</div>
-        <div class="tech-item"><img src="images/dart.png" alt="Dart"> Dart</div>
-        <div class="tech-item"><img src="images/bootstrap.png" alt="Bootstrap"> Bootstrap</div>
-        <!-- <div class="tech-item"><img src="images/vue.png" alt="Vue.js"> Vue.js</div> -->
-        <div class="tech-item"><img src="images/github.svg" alt="Github"> Github</div>
+        <div class="tech-item" role="listitem"><img src="images/html.png" alt="HTML5 logo" width="50" height="50"> HTML</div>
+        <div class="tech-item" role="listitem"><img src="images/css.png" alt="CSS3 logo" width="50" height="50"> CSS</div>
+        <div class="tech-item" role="listitem"><img src="images/JavaScript-logo.png" alt="JavaScript programming language logo" width="50" height="50"> JavaScript</div>
+        <div class="tech-item" role="listitem"><img src="images/php.png" alt="PHP programming language logo" width="50" height="50"> PHP</div>
+        <div class="tech-item" role="listitem"><img src="images/mysql.svg" alt="MySQL database logo" width="50" height="50"> MySQL</div>
+        <div class="tech-item" role="listitem"><img src="images/flutter.png" alt="Flutter framework logo" width="50" height="50"> Flutter</div>
+        <div class="tech-item" role="listitem"><img src="images/dart.png" alt="Dart programming language logo" width="50" height="50"> Dart</div>
+        <div class="tech-item" role="listitem"><img src="images/bootstrap.png" alt="Bootstrap framework logo" width="50" height="50"> Bootstrap</div>
+        <!-- <div class="tech-item"><img src="images/vue.png" alt="Vue.js framework logo"> Vue.js</div> -->
+        <div class="tech-item" role="listitem"><img src="images/github.svg" alt="GitHub version control logo" width="50" height="50"> Github</div>
     </div>
     </section>
 
@@ -94,78 +155,78 @@
         <h1 class="styled-title appear" id="software-stack-title">Projects</h1>
         
         <!-- New Project: StreetSafe -->
-        <div id="container" class="appear">
+        <article id="container" class="appear" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="project-div">
                 <div class="project-image-container">
                     <div class="project-gallery">
-                        <a href="https://streetsafe.nl/" target="_blank">
-                            <img id="streetsafe-main-image" src="images/sim1.png" alt="StreetSafe App" class="project-image center-image iphone-simulator gallery-main-image">
+                        <a href="https://streetsafe.nl/" target="_blank" rel="noopener" aria-label="Bezoek StreetSafe website">
+                            <img id="streetsafe-main-image" src="images/sim1.png" alt="StreetSafe veiligheidsapp hoofdscherm met noodknop functionaliteit" class="project-image center-image iphone-simulator gallery-main-image" itemprop="screenshot">
                         </a>
                         <div class="gallery-thumbnails">
-                            <img src="images/sim1.png" alt="StreetSafe Screen 1" class="gallery-thumbnail active" onclick="changeStreetSafeImage(this, 'images/sim1.png')">
-                            <img src="images/sim2.png" alt="StreetSafe Screen 2" class="gallery-thumbnail" onclick="changeStreetSafeImage(this, 'images/sim2.png')">
-                            <img src="images/sim3.png" alt="StreetSafe Screen 3" class="gallery-thumbnail" onclick="changeStreetSafeImage(this, 'images/sim3.png')">
+                            <img src="images/sim1.png" alt="StreetSafe app screenshot 1: hoofdscherm met noodknop" class="gallery-thumbnail active" onclick="changeStreetSafeImage(this, 'images/sim1.png')">
+                            <img src="images/sim2.png" alt="StreetSafe app screenshot 2: community netwerk kaart" class="gallery-thumbnail" onclick="changeStreetSafeImage(this, 'images/sim2.png')">
+                            <img src="images/sim3.png" alt="StreetSafe app screenshot 3: locatiedeling en veiligheidsmeldingen" class="gallery-thumbnail" onclick="changeStreetSafeImage(this, 'images/sim3.png')">
                         </div>
                     </div>
                 </div>
                 <div class="project-content">
-                    <h2 class="project-title">StreetSafe</h2>
-                    <p class="project-description">
-                        Een intelligente veiligheidsapp voor iedereen die zich veiliger wil voelen op straat. StreetSafe verbindt mensen in Nederland via een community-gebaseerd veiligheidsnetwerk.
+                    <h3 class="project-title" itemprop="name">StreetSafe - Veiligheidsapp Nederland</h3>
+                    <p class="project-description" itemprop="description">
+                        Een intelligente veiligheidsapp voor iedereen die zich veiliger wil voelen op straat. StreetSafe verbindt mensen in Nederland via een community-gebaseerd veiligheidsnetwerk met 3-seconden noodknop functionaliteit.
                     </p>
-                    <p class="project-description">De app biedt een 3-seconden noodknop, live locatiedeling en community support binnen 2 kilometer. Nu beschikbaar in de App Store.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Maps API</span>
-                        <span class="tech-tag">Community Network</span>
-                        <span class="tech-tag">iOS</span>
+                    <p class="project-description">De app biedt een 3-seconden noodknop, live locatiedeling en community support binnen 2 kilometer. Nu beschikbaar in de Apple App Store voor iOS gebruikers.</p>
+                    <div class="project-tech" itemprop="applicationCategory">
+                        <span class="tech-tag" itemprop="keywords">Flutter</span>
+                        <span class="tech-tag" itemprop="keywords">Dart</span>
+                        <span class="tech-tag" itemprop="keywords">Firebase</span>
+                        <span class="tech-tag" itemprop="keywords">Maps API</span>
+                        <span class="tech-tag" itemprop="keywords">Community Network</span>
+                        <span class="tech-tag" itemprop="operatingSystem">iOS</span>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div id="container" class="appear">
+        <article id="container" class="appear" itemscope itemtype="https://schema.org/MobileApplication">
             <div class="project-div">
                 <div class="project-image-container">
-                    <img src="images/mokup/mokup1.png" alt="Project 1" class="project-image center-image">
+                    <img src="images/mokup/mokup1.png" alt="Roadguide Flutter app voor parkeren, tanken en laden in Nederland" class="project-image center-image" itemprop="screenshot">
                 </div>
                 <div class="project-content">
-                    <h2 class="project-title">Roadguide</h2>
+                    <h3 class="project-title" itemprop="name">Roadguide - Mobiliteits App</h3>">Roadguide - Mobiliteits App</h3>
                 
-                    <p class="project-description">
-                        Flutter-app ontwikkeld gericht op mobiliteit. Deze app helpt gebruikers bij het vinden van voordelige parkeer-, tank- en laadlocaties voor hun auto.
+                    <p class="project-description" itemprop="description">
+                        Flutter mobile app ontwikkeld gericht op mobiliteit in Nederland. Deze app helpt gebruikers bij het vinden van voordelige parkeer-, tank- en laadlocaties voor elektrische en benzine auto's.
                     </p>
-                    <p class="project-description">Geleerd om met grote hoeveelheden data te werken.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
-                        <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">Mysql</span>
-                        <span class="tech-tag">Firebase</span>
+                    <p class="project-description">Geleerd om met grote hoeveelheden realtime data te werken en te integreren met externe APIs.</p>
+                    <div class="project-tech" itemprop="applicationCategory">
+                        <span class="tech-tag" itemprop="keywords">Flutter</span>
+                        <span class="tech-tag" itemprop="keywords">Dart</span>
+                        <span class="tech-tag" itemprop="keywords">PHP</span>
+                        <span class="tech-tag" itemprop="keywords">MySQL</span>
+                        <span class="tech-tag" itemprop="keywords">Firebase</span>
                     </div>
                 </div>
                
             </div>
-        </div>
+        </article>
 
 
         <!-- New Project: Roadguide Website -->
-        <div id="container" class="appear">
+        <article id="container" class="appear" itemscope itemtype="https://schema.org/WebSite">
             <div class="project-div">
                 <div class="project-image-container">
-                    <a href="https://roadguide.nl" target="_blank">
-                        <img src="images/roadguideweb.png" alt="Roadguide Website" class="project-image center-image ">
+                    <a href="https://roadguide.nl" target="_blank" rel="noopener" aria-label="Bezoek Roadguide website">
+                        <img src="images/roadguideweb.png" alt="Roadguide SaaS website gebouwd met Next.js en Tailwind CSS" class="project-image center-image" itemprop="screenshot">
                     </a>
                 </div>
                 <div class="project-content">
-                    <h2 class="project-title">Roadguide Website</h2>
-                    <p class="project-description">
-                        Een moderne SaaS-website ontwikkeld voor Roadguide, gebruikmakend van Next.js, Tailwind CSS, en Framer Motion voor vloeiende animaties.
+                    <h3 class="project-title" itemprop="name">Roadguide SaaS Website</h3>ide SaaS Website</h3>
+                    <p class="project-description" itemprop="description">
+                        Een moderne SaaS-website ontwikkeld voor Roadguide, gebruikmakend van Next.js, TypeScript, Tailwind CSS, en Framer Motion voor vloeiende animaties en optimale gebruikerservaring.
                     </p>
-                    <p class="project-description">Geleerd om een responsieve website te bouwen met de nieuwste web technologieën.</p>
-                    <div class="project-tech">
+                    <p class="project-description">Geleerd om een volledig responsieve website te bouwen met de nieuwste web technologieën en modern design principles.</p>
+                    <div class="project-tech" itemprop="keywords">
                         <span class="tech-tag">Next.js</span>
                         <span class="tech-tag">TypeScript</span>
                         <span class="tech-tag">Tailwind CSS</span>
@@ -173,20 +234,20 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
 
                         <!-- New Project 3: Soundcloud Downloader -->
-                        <div id="container" class="appear">
+                        <article id="container" class="appear" itemscope itemtype="https://schema.org/WebApplication">
                             <div class="project-div desktop-project">
                                 <div class="project-image-container">
-                                    <img src="images/soundcloud.png" alt="Soundcloud Downloader Project" class="project-image center-image desktop-screenshot">
+                                    <img src="images/soundcloud.png" alt="Soundcloud Downloader web applicatie voor het downloaden van muziek playlists" class="project-image center-image desktop-screenshot" itemprop="screenshot">
                                 </div>
                                 <div class="project-content">
-                                    <h2 class="project-title">Soundcloud Downloader</h2>
-                                    <p class="project-description">
-                                        Je kunt grote Soundcloud-afspeellijsten en individuele nummers downloaden.
+                                    <h3 class="project-title" itemprop="name">Soundcloud Downloader Tool</h3>
+                                    <p class="project-description" itemprop="description">
+                                        Web applicatie waarmee je grote Soundcloud-afspeellijsten en individuele nummers kunt downloaden. Gebouwd met Next.js, TypeScript en web scraping technologie.
                                     </p>
-                                    <div class="project-tech">
+                                    <div class="project-tech" itemprop="keywords">
                                         <span class="tech-tag">Next.js</span>
                                         <span class="tech-tag">TypeScript</span>
                                         <span class="tech-tag">Tailwind CSS</span>
@@ -196,23 +257,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
                         <!-- New Project: De Nassau -->
-                        <div id="container" class="appear">
+                        <article id="container" class="appear" itemscope itemtype="https://schema.org/WebSite">
                             <div class="project-div desktop-project">
                                 <div class="project-image-container">
-                                    <a href="https://de-nassau.nl/" target="_blank">
-                                    <img src="images/denassau.png" alt="De Nassau Project" class="project-image center-image desktop-screenshot">
+                                    <a href="https://de-nassau.nl/" target="_blank" rel="noopener" aria-label="Bezoek De Nassau website">
+                                    <img src="images/denassau.png" alt="De Nassau - Luxe woningen Jan van Nassaustraat WordPress website" class="project-image center-image desktop-screenshot" itemprop="screenshot">
                                     </a>
                                 </div>
                                 <div class="project-content">
-                                    <h2 class="project-title">De Nassau</h2>
-                                    <p class="project-description">
-                                        Een exclusieve website voor vier luxe woningen in de prestigieuze Jan van Nassaustraat, ontwikkeld met WordPress.
+                                    <h3 class="project-title" itemprop="name">De Nassau - Luxe Woningen Website</h3>
+                                    <p class="project-description" itemprop="description">
+                                        Een exclusieve WordPress website voor vier luxe woningen in de prestigieuze Jan van Nassaustraat. Volledig responsive design met moderne uitstraling en optimale gebruikerservaring.
                                     </p>
                                    
-                                    <div class="project-tech">
+                                    <div class="project-tech" itemprop="keywords">
                                         <span class="tech-tag">WordPress</span>
                                         <span class="tech-tag">HTML</span>
                                         <span class="tech-tag">CSS</span>
@@ -221,23 +282,23 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
                         <!-- New Project: L-cleaning -->
-                        <div id="container" class="appear">
+                        <article id="container" class="appear" itemscope itemtype="https://schema.org/WebSite">
                             <div class="project-div desktop-project">
                                 <div class="project-image-container">
-                                    <a href="https://lcleaning.onlinekompas.nl/" target="_blank">
-                                    <img src="images/lcleaning.png" alt="L-cleaning Project" class="project-image center-image desktop-screenshot">
+                                    <a href="https://lcleaning.onlinekompas.nl/" target="_blank" rel="noopener" aria-label="Bezoek L-cleaning website">
+                                    <img src="images/lcleaning.png" alt="L-cleaning schoonmaakdiensten WordPress website Capelle aan den IJssel" class="project-image center-image desktop-screenshot" itemprop="screenshot">
                                     </a>
                                 </div>
                                 <div class="project-content">
-                                    <h2 class="project-title">L-cleaning</h2>
-                                    <p class="project-description">
-                                        <strong>Verantwoordelijk voor de responsiviteit</strong> van deze WordPress website. L-Cleaning B.V. uit Capelle aan den IJssel biedt schoonmaakdiensten voor de horeca.
+                                    <h3 class="project-title" itemprop="name">L-cleaning - Schoonmaakdiensten Website</h3>
+                                    <p class="project-description" itemprop="description">
+                                        <strong>Verantwoordelijk voor de mobile responsiviteit</strong> van deze WordPress website. L-Cleaning B.V. uit Capelle aan den IJssel biedt professionele schoonmaakdiensten voor de horeca sector.
                                     </p>
                                 
-                                    <div class="project-tech">
+                                    <div class="project-tech" itemprop="keywords">
                                         <span class="tech-tag">WordPress</span>
                                         <span class="tech-tag">CSS</span>
                                         <span class="tech-tag">Responsive Design</span>
@@ -245,50 +306,52 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </article>
 
         <!-- New Project 1: Ticketswapbot -->
-        <div id="container" class="appear">
+        <article id="container" class="appear" itemscope itemtype="https://schema.org/SoftwareApplication">
 
         <div class="project-div" >
             <div class="project-image-container">
-                <img src="images/ticketswapbot.png" alt="Ticketswapbot Project" class="project-image center-image">
+                <img src="images/ticketswapbot.png" alt="Ticketswapbot Python automatisering voor ticket aankoop" class="project-image center-image" itemprop="screenshot">
             </div>
             <div class="project-content">
-                <h2 class="project-title">Ticketswapbot</h2>
-                <p class="project-description">
-                    Een geautomatiseerde bot geschreven in Python die automatisch tickets koopt via meldingen. Ideaal te combineren door een telefoon aan t sluiten.
+                <h3 class="project-title" itemprop="name">Ticketswapbot - Python Automatisering</h3>
+                <p class="project-description" itemprop="description">
+                    Een geautomatiseerde bot geschreven in Python die automatisch tickets koopt via real-time meldingen. Ideaal te combineren met een telefoon aansluiting voor directe notificaties.
                 </p>
-                <p class="project-description">Gebruikt om tickets snel en efficiënt te kopen zonder handmatige inspanning.</p>
-                <div class="project-tech">
+                <p class="project-description">Gebruikt om concert en evenement tickets snel en efficiënt te kopen zonder handmatige inspanning.</p>
+                <div class="project-tech" itemprop="keywords">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Automation</span>
+                    <span class="tech-tag">Web Scraping</span>
                 </div>
             </div>
         </div>
-    </div>
+    </article>
 
         <!-- New Project 2: Cryptobot -->
-        <div id="container" class="appear">
+        <article id="container" class="appear" itemscope itemtype="https://schema.org/SoftwareApplication">
 
         <div class="project-div">
             <div class="project-image-container">
-                <img src="images/cryptobot.png" alt="Cryptobot Project" class="project-image center-image">
+                <img src="images/cryptobot.png" alt="Cryptobot Python trading bot voor cryptocurrency handel" class="project-image center-image" itemprop="screenshot">
             </div>
             <div class="project-content">
-                <h2 class="project-title">Cryptobot</h2>
-                <p class="project-description">
-                    Een geautomatiseerde Python-bot die handelt op basis van een vooraf gedefinieerde strategie. Ontworpen om verschillende cryptocurrencies te kopen, verkopen en analyseren.
+                <h3 class="project-title" itemprop="name">Cryptobot - Cryptocurrency Trading Bot</h3>
+                <p class="project-description" itemprop="description">
+                    Een geautomatiseerde Python trading bot die handelt op basis van een vooraf gedefinieerde strategie. Ontworpen om verschillende cryptocurrencies automatisch te kopen, verkopen en analyseren met real-time marktdata.
                 </p>
-                <p class="project-description">Geschreven in Python om verschillende cryptocurrencies te traden.</p>
-                <div class="project-tech">
+                <p class="project-description">Geschreven in Python om verschillende cryptocurrencies zoals Bitcoin en Ethereum te traden met algoritmes.</p>
+                <div class="project-tech" itemprop="keywords">
                     <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Crypto</span>
-                    <span class="tech-tag">Trading</span>
+                    <span class="tech-tag">Cryptocurrency</span>
+                    <span class="tech-tag">Trading Bot</span>
+                    <span class="tech-tag">API Integration</span>
                 </div>
             </div>
         </div>
-    </div>
+    </article>
 
     <!-- New Project: Photo Gallery -->
     <div id="container" class="appear">
@@ -312,10 +375,11 @@
         </div>
     </div>
 
-</div>
 </section>
 
-    
+    <footer role="contentinfo" style="text-align: center; padding: 20px; opacity: 0.7;">
+        <p>&copy; 2025 Zuby van Kuilenburg - Software Developer | Rotterdam, Nederland</p>
+    </footer>
 
     <div class="spacing"></div>
 

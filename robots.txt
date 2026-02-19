@@ -1,0 +1,18 @@
+# robots.txt voor zubyvankuilenburg.nl
+
+# Sta alle zoekmachines toe om de hoofdpagina en projecten te indexeren
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /*.html
+Allow: /*.css
+Allow: /*.js
+
+# Blokkeer ALLEEN de etentjes/eten pagina
+Disallow: /eten
+Disallow: /eten/
+Disallow: /etentjes
+Disallow: /etentjes/
+
+# Sitemap locatie (optioneel, pas aan als je een sitemap hebt)
+# Sitemap: https://zubyvankuilenburg.nl/sitemap.xml
