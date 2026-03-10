@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c5ce7">
+    <title>SmartCharge Navigator - Zuby van Kuilenburg</title>
+    <meta name="description" content="SmartCharge Navigator - Datagedreven platform voor EV-laadinfrastructuur, gebouwd voor Gemeente Den Haag via Startup in Residence Intergov.">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --bg: #0a0a0b;
+            --bg-card: #131316;
+            --bg-card-hover: #1a1a1f;
+            --border: rgba(255, 255, 255, 0.06);
+            --text: #f5f5f7;
+            --text-secondary: #8e8e93;
+            --text-tertiary: #636366;
+            --accent: #6c5ce7;
+            --accent-2: #a29bfe;
+            --green: #34d399;
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 11, 0.8);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .back-btn {
+            padding: 8px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
+        /* Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+        }
+
+        .project-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(108, 92, 231, 0.15);
+            border: 1px solid rgba(108, 92, 231, 0.3);
+            border-radius: 100px;
+            font-size: 0.82rem;
+            color: var(--accent-2);
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text) 0%, var(--accent-2) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 48px;
+            border: 1px solid var(--border);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 48px;
+        }
+
+        .tag {
+            padding: 8px 18px;
+            background: rgba(108, 92, 231, 0.1);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: 100px;
+            font-size: 0.88rem;
+            color: var(--accent-2);
+            font-weight: 500;
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-top: 64px;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 24px;
+        }
+
+        li {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 48px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .info-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin: 48px 0;
+        }
+
+        .info-box h3 {
+            margin-top: 0;
+            color: var(--accent-2);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 24px;
+            margin: 48px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 80px;
+            padding: 48px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+        }
+
+        .cta-section h2 {
+            margin-top: 0;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 24px;
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: var(--accent-2);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .container { padding: 100px 20px 60px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .hero-image { height: 250px; }
+            .gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/" class="nav-logo">Z</a>
+    <a href="/#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Terug naar projecten</a>
+</nav>
+
+<div class="container">
+    <div class="project-badge">
+        <i class="fas fa-bolt"></i> Startup in Residence Intergov Challenge 2025-2026
+    </div>
+
+    <h1>SmartCharge Navigator</h1>
+    <p class="subtitle">Werkend prototype voor EV-laadinfrastructuur — Deelname aan challenge Gemeente Den Haag</p>
+
+    <img src="images/4385ace3-7bff-453a-b6da-7eec2d2db822.JPG" alt="SmartCharge Navigator team" class="hero-image">
+
+    <div class="tags">
+        <span class="tag">Flutter</span>
+        <span class="tag">Dart</span>
+        <span class="tag">Next.js</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Open Data (NDW)</span>
+        <span class="tag">Maps API</span>
+        <span class="tag">Dashboard</span>
+        <span class="tag">iOS</span>
+    </div>
+
+    <h2>Over het project</h2>
+    <p>
+        De afgelopen maanden bouwden wij SmartCharge Navigator tijdens de <strong>Startup in Residence Intergov challenge</strong> van de Gemeente Den Haag, met als uitdaging: "Slimmer plaatsen en vinden van laadplekken".
+    </p>
+    <p>
+        Samen met <strong>Justus Verhoeven</strong> ontwikkelden wij een datagedreven platform met twee componenten: een mobiele app voor chauffeurs en een analytics dashboard voor de gemeente. We bouwden een <strong>werkend prototype</strong> met kaart, slimme filters, en wijk-analyses voor beleidsinzichten.
+    </p>
+
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-number">56.000+</div>
+            <div class="stat-label">Laadpunten (NDW)</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Platforms</div>
+        </div>
+
+    </div>
+
+    <h2>Het probleem</h2>
+    <p>
+        In Den Haag groeit het aantal elektrische voertuigen razendsnel. Vooral zzp'ers en kleine ondernemers zijn afhankelijk van de openbare ruimte om hun bestelauto op te laden, vaak in de avond of nacht. 
+    </p>
+    <p>
+        <strong>De uitdaging:</strong> Wanneer laadpalen bezet of defect zijn, rijden chauffeurs rond op zoek naar een vrije plek. Dat 'zoekverkeer' veroorzaakt:
+    </p>
+    <ul>
+        <li>Extra uitstoot en vervuiling</li>
+        <li>Onnodig verkeersdrukte</li>
+        <li>Frustratie bij chauffeurs</li>
+        <li>Verlies van tijd en productiviteit</li>
+    </ul>
+    <p>
+        Tegelijkertijd mist de gemeente inzicht in <strong>waar de vraag naar nieuwe laadinfra het grootst is</strong>. Zoekverkeer geeft waardevolle signalen over plekken waar het aanbod niet voldoet aan de vraag.
+    </p>
+
+    <h2>Onze oplossing</h2>
+    <p>
+        We ontwikkelden een <strong>dual-purpose platform</strong> dat beide problemen aanpakt:
+    </p>
+
+    <h3>1. Mobile app voor chauffeurs (Flutter)</h3>
+    <p>
+        Een iOS app die real-time laadpaaldata integreert van het <strong>Nationaal Data Wegverkeer (NDW)</strong> — meer dan 56.000 laadpunten door heel Nederland. De app helpt chauffeurs:
+    </p>
+    <ul>
+        <li><strong>Real-time beschikbaarheid</strong> van laadpalen bekijken</li>
+        <li><strong>Route-optimalisatie</strong> naar de dichtstbijzijnde vrije laadplek</li>
+        <li><strong>Filters</strong> op laadsnelheid, type connector, en betaalmethode</li>
+        <li><strong>Notificaties</strong> wanneer een laadplek vrijkomt in de buurt</li>
+        <li><strong>Historische data</strong> over gemiddelde bezetting per tijdstip</li>
+    </ul>
+
+    <h3>2. Analytics dashboard voor gemeente (Next.js)</h3>
+    <p>
+        Een web-based dashboard dat de gemeente inzicht geeft in:
+    </p>
+    <ul>
+        <li><strong>Zoekverkeer-heatmaps</strong> — waar rijden chauffeurs rond op zoek naar laadpalen?</li>
+        <li><strong>Vraagdruk per wijk</strong> — waar is de vraag groter dan het aanbod?</li>
+        <li><strong>Piekuren</strong> — wanneer is de laadvraag het hoogst?</li>
+        <li><strong>Bezettingsgraad</strong> — welke laadpalen zijn onderbenut of overbezet?</li>
+        <li><strong>Data-driven aanbevelingen</strong> voor nieuwe laadinfra-plaatsing</li>
+    </ul>
+
+    <div class="gallery">
+        <img src="images/Screenshot 2025-12-29 at 14.56.56.png" alt="Dashboard analytics">
+        <img src="images/Simulator Screenshot - iphone 15 pro - 2025-12-24 at 12.46.10.png" alt="App kaartweergave">
+        <img src="images/Simulator Screenshot - iphone 15 pro - 2025-12-24 at 12.46.42.png" alt="App detail scherm">
+    </div>
+
+    <h2>Technische stack</h2>
+    <p>
+        Het project is gebouwd met moderne, schaalbare technologieën:
+    </p>
+
+    <div class="info-box">
+        <h3>Mobile app</h3>
+        <ul>
+            <li><strong>Flutter & Dart</strong> — Cross-platform framework (iOS focus)</li>
+            <li><strong>Firebase</strong> — Real-time database en authenticatie</li>
+            <li><strong>Google Maps API</strong> — Kaartweergave en routing</li>
+            <li><strong>NDW Open Data API</strong> — 56.000+ laadpunten data</li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <h3>Dashboard</h3>
+        <ul>
+            <li><strong>Next.js & TypeScript</strong> — Modern React framework</li>
+            <li><strong>Tailwind CSS</strong> — Utility-first styling</li>
+            <li><strong>Chart.js / D3.js</strong> — Data visualisatie</li>
+            <li><strong>PostgreSQL</strong> — Analytics data opslag</li>
+        </ul>
+    </div>
+
+    <h2>Resultaat & wat we hebben geleerd</h2>
+    <p>
+        We hebben deelgenomen aan de <strong>Startup in Residence Intergov challenge</strong> en een werkend prototype ontwikkeld. Uiteindelijk zijn we <strong>niet geselecteerd voor het programma</strong>, maar deze ervaring was ontzettend waardevol.
+    </p>
+    <p>
+        <strong>Wat we hebben opgeleverd:</strong>
+    </p>
+    <ul>
+        <li><strong>Werkend prototype</strong> met Flutter mobile app en Next.js dashboard</li>
+        <li><strong>Integratie van 56.000+ laadpunten</strong> via open data NDW</li>
+        <li><strong>Real-time kaartweergave</strong> met beschikbaarheid en routing</li>
+        <li><strong>Analytics dashboard</strong> met wijk-analyses en beleidsinzichten</li>
+        <li><strong>Slimme filters</strong> op laadsnelheid, type, en beschikbaarheid</li>
+    </ul>
+    <p>
+        <strong>Wat we hebben geleerd:</strong>
+    </p>
+    <ul>
+        <li><strong>Werken met overheidsdata</strong> — Integratie van open data en real-time processing</li>
+        <li><strong>De uitdagingen rondom laadinfrastructuur</strong> — Inzicht in maatschappelijke problematiek</li>
+        <li><strong>Vertaling probleem naar oplossing</strong> — Van challenge brief naar werkend prototype</li>
+        <li><strong>Samenwerking met overheid</strong> — Begrip van procurement en beleidsprocessen</li>
+        <li><strong>Rapid prototyping</strong> — Snel itereren en valideren met eindgebruikers</li>
+    </ul>
+
+    <h2>Over de challenge</h2>
+    <p>
+        We namen deel aan de marktverkenningsfase van de <strong>Startup in Residence Intergov challenge</strong> — een samenwerkingsverband tussen gemeenten en startups om innovatieve oplossingen te ontwikkelen voor maatschappelijke uitdagingen.
+    </p>
+    <p>
+        De challenge bestond uit twee fases:
+    </p>
+    <ul>
+        <li><strong>Marktverkenning</strong> — Interessemelding met korte omschrijving van de oplossing</li>
+        <li><strong>Offertefase</strong> — 3-5 geselecteerde partijen werken plan van aanpak uit en pitchen</li>
+        <li><strong>Programma</strong> — Winnende partij krijgt €25.000 en 5 maanden begeleiding</li>
+    </ul>
+    <p>
+        Wij werden uitgenodigd om ons prototype te pitchen in Den Haag. We presenteerden onze oplossing met werkende demo's van de app en het dashboard. Uiteindelijk zijn we niet geselecteerd voor het volledige programma, maar deze ervaring was ontzettend waardevol — van het ontwikkelen van een werkend prototype tot het pitchen voor beleidsmakers en stakeholders.
+    </p>
+
+    <h2>De challenge</h2>
+    <p>
+        De Gemeente Den Haag zocht naar <strong>datagedreven oplossingen voor het slimmer vinden en plannen van laadplekken</strong> in zero-emissiezones. De challenge richtte zich specifiek op:
+    </p>
+    <ul>
+        <li>Ondersteuning voor chauffeurs bij het snel vinden van beschikbare laadplekken</li>
+        <li>Reductie van zoekverkeer en inzicht in verkeersstromen</li>
+        <li>Hulp voor gemeenten bij het bepalen waar extra laadinfra nodig is</li>
+        <li>Oplossingen die op termijn schaalbaar zijn naar andere steden</li>
+    </ul>
+
+    <div class="info-box">
+        <h3>Voor wie?</h3>
+        <p>
+            De challenge richtte zich op startups, scale-ups en innovatieve mkb's die werken met <strong>data-analyse, AI, navigatie, mobiliteit of energiebeheer</strong>. De focus lag op partijen met de ambitie om structurele, schaalbare impact te maken.
+        </p>
+    </div>
+
+    <h2>Reflectie</h2>
+    <p>
+        Hoewel we niet door zijn gegaan naar de volgende fase, was dit project een waardevolle leerervaring:
+    </p>
+    <ul>
+        <li><strong>Van probleem naar prototype</strong> — We hebben in korte tijd een werkend prototype gebouwd voor een complexe uitdaging</li>
+        <li><strong>Open data integratie</strong> — Praktische ervaring met het NDW (Nationaal Toegangspunt) en 56.000+ laadpunten</li>
+        <li><strong>Dual-purpose platform</strong> — Balans vinden tussen eindgebruiker (chauffeurs) en stakeholder (gemeente) behoeften</li>
+        <li><strong>Maatschappelijke impact</strong> — Inzicht in de transitie naar elektrisch vervoer en bijbehorende infrastructuur uitdagingen</li>
+        <li><strong>Rapid prototyping</strong> — Snel itereren met Flutter en Next.js om een MVP te realiseren</li>
+        <li><strong>Challenge mindset</strong> — Ervaring met het pitchen van een oplossing voor overheidspartners</li>
+    </ul>
+    <p>
+        Deze ervaring heeft me laten zien hoe je datagedreven oplossingen kunt bouwen voor maatschappelijke uitdagingen, en hoe belangrijk het is om zowel technische haalbaarheid als gebruikersbehoefte in balans te brengen.
+    </p>
+
+    <div class="cta-section">
+        <h2>Meer weten over dit project?</h2>
+        <p>Neem contact met me op om te bespreken hoe ik vergelijkbare oplossingen kan bouwen voor jouw organisatie.</p>
+        <a href="mailto:zubyw2012@gmail.com" class="cta-btn">
+            <i class="fas fa-envelope"></i> Stuur een bericht
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
